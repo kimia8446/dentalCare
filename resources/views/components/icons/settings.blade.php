@@ -1,0 +1,4 @@
+<svg {{ $attributes }} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 8.5C10.067 8.5 8.5 10.067 8.5 12C8.5 13.933 10.067 15.5 12 15.5C13.933 15.5 15.5 13.933 15.5 12C15.5 10.067 13.933 8.5 12 8.5Z" stroke="currentColor" stroke-width="1.8"/>
+    <path d="M19.4 15A7.8 7.8 0 0 0 20 12A7.8 7.8 0 0 0 19.4 9L21 7L19 5L17 6.6A7.8 7.8 0 0 0 14 6L13 3H11L10 6A7.8 7.8 0 0 0 7 6.6L5 5L3 7L4.6 9A7.8 7.8 0 0 0 4 12A7.8 7.8 0 0 0 4.6 15L3 17L5 19L7 17.4A7.8 7.8 0 0 0 10 18L11 21H13L14 18A7.8 7.8 0 0 0 17 17.4L19 19L21 17L19.4 15Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+</svg>
