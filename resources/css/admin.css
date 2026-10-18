@@ -1,0 +1,145 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --admin-blue: #1685cf;
+    --admin-navy: #143a65;
+    --admin-background: #f3f8fc;
+    --admin-muted: #7590aa;
+    --admin-border: #e2edf5;
+    --admin-orange: #ff923f;
+    --admin-white: #ffffff;
+}
+
+.admin-page {
+    min-height: 100vh;
+    margin: 0;
+    direction: rtl;
+    background:
+        radial-gradient(circle at 15% 15%, #dceffc 0, transparent 32%),
+        var(--admin-background);
+    color: var(--admin-navy);
+    font-family: 'Vazirmatn', sans-serif;
+}
+
+.admin-page *,
+.admin-page *::before,
+.admin-page *::after {
+    box-sizing: border-box;
+}
+
+.admin-page button,
+.admin-page input {
+    font: inherit;
+}
+
+.admin-login {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.admin-login__card {
+    width: 100%;
+    max-width: 440px;
+    padding: 40px;
+    background: var(--admin-white);
+    border: 1px solid var(--admin-border);
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(20, 58, 101, 0.10);
+}
+
+.admin-login__card h1 {
+    margin: 0 0 12px;
+    color: var(--admin-navy);
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.7;
+}
+
+.admin-login__card > p {
+    margin: 0 0 30px;
+    color: var(--admin-muted);
+    font-size: 14px;
+    line-height: 2;
+}
+
+.admin-page .form-group {
+    margin-bottom: 22px;
+}
+
+.admin-page .form-group label {
+    display: block;
+    margin-bottom: 9px;
+    color: var(--admin-navy);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.admin-page .form-group input {
+    display: block;
+    width: 100%;
+    min-height: 50px;
+    padding: 12px 14px;
+    border: 1px solid var(--admin-border);
+    border-radius: 12px;
+    outline: none;
+    background: #fbfdff;
+    color: var(--admin-navy);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.admin-page .form-group input:focus {
+    border-color: var(--admin-blue);
+    box-shadow: 0 0 0 4px rgba(22, 133, 207, 0.12);
+}
+
+.admin-page .form-group input:focus-visible {
+    outline: none;
+}
+
+.admin-page .form-error {
+    margin: 8px 0 0;
+    color: #c0392b;
+    font-size: 12px;
+}
+
+.admin-page button[type="submit"] {
+    width: 100%;
+    min-height: 50px;
+    margin-top: 6px;
+    border: 0;
+    border-radius: 12px;
+    background: var(--admin-blue);
+    color: var(--admin-white);
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.admin-page button[type="submit"]:hover {
+    background: var(--admin-navy);
+    transform: translateY(-1px);
+}
+
+.admin-page button[type="submit"]:focus-visible {
+    outline: 3px solid rgba(22, 133, 207, 0.3);
+    outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+    .admin-login {
+        padding: 16px;
+    }
+
+    .admin-login__card {
+        padding: 28px 22px;
+        border-radius: 20px;
+    }
+
+    .admin-login__card h1 {
+        font-size: 22px;
+    }
+}
