@@ -39,22 +39,22 @@
 
         <div class="category-grid">
             <a href="/category/oral-hygiene" class="category-card category-card--blue">
-                <span class="category-card__icon"><x-icons.tooth /></span>
+                <span class="category-card__icon"><img src="{{ asset('images/careTooth.jpg') }}" alt=" مسواک و دندان"></span>
                 <strong>بهداشت دهان و دندان</strong>
             </a>
 
             <a href="/category/teeth-growth" class="category-card category-card--purple">
-                <span class="category-card__icon"><x-icons.tooth /></span>
+                <span class="category-card__icon"><img src="{{ asset('images/Toothp.jpg') }}" alt="دندان"></span>
                 <strong>رویش دندان</strong>
             </a>
 
             <a href="/category/toothbrushing" class="category-card category-card--green">
-                <span class="category-card__icon"><x-icons.toothbrush /></span>
+                <span class="category-card__icon"><img src="{{ asset('images/teachToothbrushing.jpg') }}" alt="مسواک"></span>
                 <strong>مسواک و مراقبت روزانه</strong>
             </a>
 
             <a href="/category/dental-injuries" class="category-card category-card--orange">
-                <span class="category-card__icon"><x-icons.tooth /></span>
+                <span class="category-card__icon"><img src="{{ asset('images/badtooth.jpg') }}" alt="دندان خراب"></span>
                 <strong>آسیب‌های دندانی</strong>
             </a>
         </div>

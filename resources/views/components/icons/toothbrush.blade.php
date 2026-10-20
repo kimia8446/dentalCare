@@ -4,4 +4,4 @@
     <path d="M17 17.5L20 14.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
     <path d="M6.5 6L4 8.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
     <path d="M8 7.5L5.5 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-</svg
+</svg>

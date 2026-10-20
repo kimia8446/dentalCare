@@ -2,12 +2,14 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container py-4">
-    <h1 class="mb-4">افزودن دسته‌بندی</h1>
+<div class="container py-4 admin-form-page">
+    <div class="admin-page-header">
+        <h1>افزودن دسته‌بندی</h1>
+    </div>
 
     @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul class="mb-0">
+        <div class="admin-alert">
+            <ul>
                 @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>
                 @endforeach
@@ -15,50 +17,30 @@
         </div>
     @endif
 
-    <form action="{{ route('admin.categories.store') }}" method="POST">
-        @csrf
+    <div class="admin-form-card">
+        <form action="{{ route('admin.categories.store') }}" method="POST" class="admin-form">
+            @csrf
 
-        <div class="mb-3">
-            <label for="title" class="form-label">عنوان دسته‌بندی</label>
-            <input
-                type="text"
-                name="title"
-                id="title"
-                class="form-control"
-                value="{{ old('title') }}"
-                required
-            >
-        </div>
+            <div class="admin-form-group">
+                <label for="title">عنوان دسته‌بندی</label>
+                <input type="text" name="title" id="title" value="{{ old('title') }}" required>
+            </div>
 
-        <div class="mb-3">
-            <label for="slug" class="form-label"> (Slug)</label>
-            <input
-                type="text"
-                name="slug"
-                id="slug"
-                class="form-control"
-                value="{{ old('slug') }}"
-                required
-            >
-        </div>
+            <div class="admin-form-group">
+                <label for="slug">شناسه انگلیسی (Slug)</label>
+                <input type="text" name="slug" id="slug" value="{{ old('slug') }}" required>
+            </div>
 
-        <div class="mb-3">
-            <label for="description" class="form-label">توضیحات</label>
-            <textarea
-                name="description"
-                id="description"
-                class="form-control"
-                rows="4"
-            >{{ old('description') }}</textarea>
-        </div>
+            <div class="admin-form-group">
+                <label for="description">توضیحات</label>
+                <textarea name="description" id="description" rows="4">{{ old('description') }}</textarea>
+            </div>
 
-        <button type="submit" class="btn btn-primary">
-            ذخیره دسته‌بندی
-        </button>
-
-        <a href="{{ route('admin.categories.index') }}" class="btn btn-secondary">
-            بازگشت
-        </a>
-    </form>
+            <div class="admin-form-actions">
+                <button type="submit" class="admin-btn">ذخیره دسته‌بندی</button>
+                <a href="{{ route('admin.categories.index') }}" class="admin-btn admin-btn-secondary">بازگشت</a>
+            </div>
+        </form>
+    </div>
 </div>
 @endsection
