@@ -65,35 +65,20 @@
             <h2>محتوای ویژه</h2>
             <a href="/videos">مشاهده همه ←</a>
         </div>
-
         <div class="video-grid">
-            <a href="/videos/toothbrushing" class="video-card">
-                <div class="video-card__image">
-                    <img src="/images/video-brushing.jpg" alt="آموزش مسواک زدن">
-                    <span class="play-button">▶</span>
-                </div>
-                <strong>چگونه مسواک بزنیم؟</strong>
-                <small>ویدئو آموزشی</small>
-            </a>
-
-            <a href="/videos/healthy-teeth" class="video-card">
-                <div class="video-card__image">
-                    <img src="/images/video-teeth.jpg" alt="آموزش سلامت دندان">
-                    <span class="play-button">▶</span>
-                </div>
-                <strong>روش صحیح نگهداری از دندان</strong>
-                <small>ویدئو آموزشی</small>
-            </a>
-
-            <a href="/videos/healthy-food" class="video-card">
-                <div class="video-card__image">
-                    <img src="/images/video-food.jpg" alt="تغذیه سالم برای دندان">
-                    <span class="play-button">▶</span>
-                </div>
-                <strong>مراقبت‌های بعد از غذا</strong>
-                <small>ویدئو آموزشی</small>
-            </a>
-        </div>
+             @forelse ($articles as $article)
+        <a href="{{ route('articles.show', $article->slug) }}" class="video-card"> 
+            <div class="video-card__image">
+                <img src="{{ asset('images/video-brushing.jpg') }}" alt="{{ $article->title }}">
+                <span class="play-button">▶</span>
+            </div>
+            <strong>{{ $article->title }}</strong>
+            <small>محتوای آموزشی</small>
+        </a>
+    @empty
+        <p>هنوز محتوای آموزشی ثبت نشده است.</p>
+    @endforelse
+</div>
     </section>
 
     <a href="/category/oral-hygiene" class="bottom-banner">

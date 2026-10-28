@@ -7,9 +7,10 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ArticleController;
+use App\Models\Article;
 
-Route::get('/', [HomeController::class, 'index']);
-
+Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/category/{slug}', [CategoryController::class, 'show']);
 
 Route::get('/admin/login', [AuthController::class, 'showLoginForm'])
@@ -30,3 +31,8 @@ Route::middleware(['auth', 'admin'])
 
         Route::resource('categories', AdminCategoryController::class);
     });
+Route::get('/articles/{slug}', [ArticleController::class, 'show'])
+    ->name('articles.show');
+
+
+Route::get('/search',[HomeController::class],'search')->name('search');
